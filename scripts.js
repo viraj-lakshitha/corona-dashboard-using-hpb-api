@@ -16,8 +16,7 @@ function loadDataFromAPI() {
         document.getElementById("global_new_deaths").innerHTML = numberWithCommas(JSON.parse(this.responseText).data.global_new_deaths);
         // Row 4 - Data
         document.getElementById("global_recovered").innerHTML = numberWithCommas(JSON.parse(this.responseText).data.global_recovered);
-        document.getElementById("treatment_local").innerHTML = JSON.parse(this.responseText).data.treatment_local;
-        document.getElementById("treatment_foreign").innerHTML = JSON.parse(this.responseText).data.treatment_foreign;
+        
         // Last Updates
         document.getElementById("update_date_time1").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
         document.getElementById("update_date_time2").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
@@ -29,9 +28,7 @@ function loadDataFromAPI() {
         document.getElementById("update_date_time8").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
         document.getElementById("update_date_time9").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
         document.getElementById("update_date_time10").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
-        document.getElementById("update_date_time11").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
-        document.getElementById("update_date_time12").innerHTML =  "Last Update : "+JSON.parse(this.responseText).data.update_date_time;
-
+        
       }
     };
     xhttp.open("GET", "https://hpb.health.gov.lk/api/get-current-statistical", true);
